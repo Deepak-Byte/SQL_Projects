@@ -15,7 +15,8 @@ This project involves a comprehensive analysis of Netflix's movies and TV shows 
 Available in same repository
 
 # Schema
-...DROP TABLE IF EXISTS netflix_titles;
+'''
+DROP TABLE IF EXISTS netflix_titles;
 CREATE TABLE netflix_titles
 (
     show_id      VARCHAR(5),
@@ -30,7 +31,7 @@ CREATE TABLE netflix_titles
     duration     VARCHAR(15),
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
-);...
+)...
 
 # Business Problems and Solutions
 ### 1.Count the Number of Movies vs TV Shows
