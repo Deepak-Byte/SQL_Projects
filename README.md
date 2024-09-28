@@ -15,7 +15,7 @@ This project involves a comprehensive analysis of Netflix's movies and TV shows 
 Available in same repository
 
 # Schema
-'''
+'''sql
 DROP TABLE IF EXISTS netflix_titles;
 CREATE TABLE netflix_titles
 (
