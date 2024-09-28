@@ -16,6 +16,12 @@ Available in same repository
 
 # Schema
 
+```sql
+SELECT name, age
+FROM users
+WHERE age > 30
+ORDER BY age DESC;
+
 DROP TABLE IF EXISTS netflix_titles;
 CREATE TABLE netflix_titles
 (
