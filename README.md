@@ -33,14 +33,13 @@ CREATE TABLE netflix_titles
 );...
 
 # Business Problems and Solutions
+### 1.Count the Number of Movies vs TV Shows
+'''sql
+select type, count(*) as Total_number from netflix_titles group by type'''
 
-** 1.Count the Number of Movies vs TV Shows
-...sql
-select type, count(*) as Total_number from netflix_titles group by type...
-
-** 2.Find most common rating for Movie and TV show
-...sql
-select type, rating, count(*) as Total_count from netflix_titles group by 1,2  order by Total_count desc limit 2...
+### 2.Find most common rating for Movie and TV show
+'''sql
+select type, rating, count(*) as Total_count from netflix_titles group by 1,2  order by Total_count desc limit 2'''
 
 
 
