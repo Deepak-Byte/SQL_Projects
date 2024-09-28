@@ -64,7 +64,7 @@ select * from netflix_titles where type='Movie' and duration=(select max(duratio
 ### 6.Find the content added in last 5 year 
 ```sql
 select * from netflix_titles 
-where to_date(date_added,'Month DD, YYYY') >= (select year(now()) - interval 5 year);
+where YEAR(STR_TO_DATE(date_added, '%M %d, %Y')) >= (select year(now()) - 5 year);
 ```
 
 ### 7.Find all movie/tv series made by director name='Rajiv'
