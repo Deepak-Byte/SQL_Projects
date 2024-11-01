@@ -27,18 +27,29 @@ Complete Data set available on this 'https://8weeksqlchallenge.com/case-study-4/
 The following case study questions include some general data exploration analysis for the nodes and transactions before diving right into the core business questions and finishes with a challenging final request!
 
 ### Basic analysis 
-```sql select min(start_date) as min_date_start,
-	   max(start_date) as max_date_start,
-       min(end_date) as min_date_end,
-	   max(end_date) as max_date_end from customer_nodes; ```
+```sql
+select min(start_date) as min_date_start, max(start_date) as max_date_start, min(end_date) as min_date_end, max(end_date) as max_date_end from customer_nodes;
+```
        
-```sql select month(start_date) as start_month from customer_nodes group by 1; ```      
-```sql select count(*) from customer_nodes where end_date > '2020-12-31'; ```
-```sql select * from customer_nodes where end_date > '2020-12-31'; ```
+```sql 
+select month(start_date) as start_month from customer_nodes group by 1;
+```      
+```sql 
+select count(*) from customer_nodes where end_date > '2020-12-31';
+```
+```sql 
+select * from customer_nodes where end_date > '2020-12-31';
+```
 
-```sql select txn_type, txn_amount from customer_transactions group by txn_type,txn_amount order by txn_amount desc limit 1; ```
-```sql select month(txn_date) as txn_dates, count(*) from customer_transactions group by 1; ```
-```sql select distinct txn_type, sum(txn_amount) from customer_transactions group by txn_type; ```
+```sql 
+select txn_type, txn_amount from customer_transactions group by txn_type,txn_amount order by txn_amount desc limit 1;
+```
+```sql
+select month(txn_date) as txn_dates, count(*) from customer_transactions group by 1;
+```
+```sql
+select distinct txn_type, sum(txn_amount) from customer_transactions group by txn_type;
+```
 
 # A. Customer Nodes Exploration
 ### 1> How many unique nodes are there on the Data Bank system?
@@ -179,7 +190,8 @@ where txn_date <= (SELECT MAX(txn_date) FROM customer_transactions) - INTERVAL 3
 CREATE EVENT update_data_event
 ON SCHEDULE EVERY 1 MINUTE
 DO
-UPDATE customer_transactions SET last_checked = NOW(); ```
+UPDATE customer_transactions SET last_checked = NOW();
+```
 
 ### 14> running customer balance column that includes the impact each transaction
 ```sql select *, sum(CASE 
