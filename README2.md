@@ -6,6 +6,21 @@ Customers are allocated cloud data storage limits which are directly linked to h
 The management team at Data Bank want to increase their total customer base - but also need some help tracking just how much data storage their customers will need.
 This case study is all about calculating metrics, growth and helping the business analyse their data in a smart way to better forecast and plan for their future developments!
 
+# Available Data
+The Data Bank team have prepared a data model for this case study as well as a few example rows from the complete dataset below to get you familiar with their tables.
+Table 1: Regions
+Just like popular cryptocurrency platforms - Data Bank is also run off a network of nodes where both money and data is stored across the globe. In a traditional banking sense - you can think of these nodes as bank branches or stores that exist around the world.
+
+This regions table contains the region_id and their respective region_name values
+
+region_id	region_name
+1	Africa
+2	America
+3	Asia
+4	Europe
+5	Oceania
+
+
 show tables in databank;
 select * from customer_nodes limit 10;
 select * from customer_transactions limit 10;
