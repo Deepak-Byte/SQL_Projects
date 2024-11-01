@@ -8,17 +8,17 @@ This case study is all about calculating metrics, growth and helping the busines
 
 # Available Data
 The Data Bank team have prepared a data model for this case study as well as a few example rows from the complete dataset below to get you familiar with their tables.
-Table 1: Regions
-Just like popular cryptocurrency platforms - Data Bank is also run off a network of nodes where both money and data is stored across the globe. In a traditional banking sense - you can think of these nodes as bank branches or stores that exist around the world.
 
+### Table 1: Regions
+Just like popular cryptocurrency platforms - Data Bank is also run off a network of nodes where both money and data is stored across the globe. In a traditional banking sense - you can think of these nodes as bank branches or stores that exist around the world.
 This regions table contains the region_id and their respective region_name values
 
-region_id	region_name
-1	Africa
-2	America
-3	Asia
-4	Europe
-5	Oceania
+### Table 2: Customer Nodes
+Customers are randomly distributed across the nodes according to their region - this also specifies exactly which node contains both their cash and data.
+This random distribution changes frequently to reduce the risk of hackers getting into Data Bank’s system and stealing customer’s money and data!
+Below is a sample of the top 10 rows of the data_bank.customer_nodes
+
+
 
 
 show tables in databank;
